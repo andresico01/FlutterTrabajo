@@ -18,6 +18,23 @@ class Vehiculo {
     """;
   }
 }
+
+// funciones listas
+
+void listaMostrar(var list){
+  print("lista for normal \n");
+  for(int i = 0; i < list.length; i++ ){
+    print("datos de a lista ${list[i]}");
+  }
+}
+
+void listaForEach(var list){
+  print("lista forEach\n");
+  list.forEach((var datosMostrar){
+    print("el dato a mostrar es ${datosMostrar}");
+  });
+}
+
 //Definir el mayor que
 
 bool esMayorFunction(int numeroUno, int numeroDos) => (numeroUno > numeroDos);
@@ -126,7 +143,13 @@ void controlSalida(int controlInt) {
 
 void main() {
   int num = 5;
-
+  
+   var list = ['apples', 'bananas','orange'];
+  
+  listaForEach(list);
+  
+  listaMostrar(list);
+  
   int valorFactorial = factorial(num);
 
   print(valorFactorial);
